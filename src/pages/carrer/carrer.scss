@@ -1,0 +1,61 @@
+page-carrer {
+
+    .parallelogram1 {
+        width: 75%; 
+        height: 17%;
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f0f9ff+0,c4c4c4+100,c4c4c4+100 */
+background: #f0f9ff; /* Old browsers */
+background: -moz-linear-gradient(45deg, #f0f9ff 0%, #c4c4c4 100%, #c4c4c4 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(45deg, #f0f9ff 0%,#c4c4c4 100%,#c4c4c4 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(45deg, #f0f9ff 0%,#c4c4c4 100%,#c4c4c4 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', endColorstr='#c4c4c4',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+        /* Skew */
+        -webkit-transform: skew(-20deg); 
+        -moz-transform: skew(-20deg); 
+        -o-transform: skew(-20deg);
+        transform: skew(-20deg);
+        margin-right: 5%;
+        position: absolute;
+     } 
+    .parallelogram2 {
+        width: 75%;
+        height: 16%;
+        background: #fdc201;
+        -webkit-transform: skew(-20deg);
+        transform: skew(-20deg);
+        position: absolute;
+        z-index: 99;
+        margin: -2% 14%;
+        text-align: center;
+        padding-top: 8%;
+     } 
+
+     .circle { 
+        width: 50px;
+        height: 50px;
+       /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f0f9ff+0,c4c4c4+100,c4c4c4+100 */
+background: #f0f9ff; /* Old browsers */
+background: -moz-linear-gradient(45deg, #f0f9ff 0%, #c4c4c4 100%, #c4c4c4 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(45deg, #f0f9ff 0%,#c4c4c4 100%,#c4c4c4 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(45deg, #f0f9ff 0%,#c4c4c4 100%,#c4c4c4 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', endColorstr='#c4c4c4',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+        border-radius: 70px;
+        position: absolute;
+        text-align: center;
+        z-index: 101;
+        margin: 8% -2%;
+        padding-top: 3%;
+
+     }  
+     .cont{
+        padding: 16% 0%;
+     }
+
+     .searchbar-ios-cancel {
+      .button-inner{
+          display: none;
+      }
+      
+  }
+  
+}

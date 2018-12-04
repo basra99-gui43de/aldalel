@@ -1,0 +1,26 @@
+page-aldalel-list {
+    ion-content {
+    direction: rtl;
+}
+.fram{
+    position: absolute; 
+}
+.tit1{
+    position: relative;
+    z-index: 99;
+    padding: 1% 46% 0 0;
+}
+.tit2{
+    position: relative;
+    z-index: 99;
+    padding: 0 39% 0 0;
+}
+.searchbar-ios-cancel {
+    .button-inner{
+        display: none;
+    }
+    
+}
+
+
+}

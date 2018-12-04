@@ -1,0 +1,32 @@
+<ion-header >
+
+  <ion-navbar color="dark_blue">
+    <ion-title>التفاصيل</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="bg_img" >
+  <div *ngFor=" let item of myCarrerInfo">
+  <div *ngIf="item.id === id">
+    <img class="logo_img" src="./assets/imgs/job3/3.png">
+<div class="address cont">
+ <h6><ion-icon class="my_icon" name="pin"></ion-icon>{{item.location}}</h6>
+</div>
+
+<div class="phone cont">
+  <ion-grid>
+      <ion-row>
+        <ion-col col-6><h6><ion-icon class="my_icon" name="phone-portrait"></ion-icon>{{item.phone_number}} </h6></ion-col>
+   
+        <!-- <ion-col col-6><h6><ion-icon class="my_icon" name="phone-portrait"></ion-icon>07800000000  </h6></ion-col> -->
+      </ion-row>
+    </ion-grid>
+  </div>
+</div>
+</div>
+
+
+
+</ion-content>

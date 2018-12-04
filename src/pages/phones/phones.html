@@ -1,0 +1,42 @@
+<ion-header >
+
+    <ion-toolbar color="dark_blue">
+        <ion-title *ngIf="!sr ">
+          هواتف مهمة
+          </ion-title>
+        <ion-searchbar [(ngModel)]="term" showCancelButton="true" *ngIf="sr ">
+        </ion-searchbar>
+  
+        <ion-buttons star>
+            <button *ngIf="!sr " ion-button icon-only (click)="back()"> 
+                <ion-icon name="arrow-back"></ion-icon>
+              رجوع
+             
+            </button>
+          </ion-buttons>
+  
+    <ion-buttons end>
+      <button *ngIf="sr " ion-button icon-only (click)="ser_Input()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-buttons end>
+      <button *ngIf="!sr " ion-button icon-only (click)="ser_Input()">
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+  </ion-header>
+  
+  
+  <ion-content class="bg_img" padding>
+    
+<div class="phone_content"  *ngFor=" let item of myphone  |filter:term">
+ <img class="phone_img" (click)="list()" src="./assets/imgs/phones/1.png">
+  <div class="phone_name"><p>{{item.company_name}}</p></div>
+  <div class="phone_number"><p>{{item.phone_number}}</p></div>
+</div>
+        
+  
+  </ion-content>
+  

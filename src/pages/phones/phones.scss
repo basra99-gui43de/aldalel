@@ -1,0 +1,30 @@
+page-phones {
+.phone_content{
+    position: relative;
+    padding: 10% 0%;
+}
+.phone_name{
+color: #1a305f;
+position: absolute;
+padding-right: 2%;
+font-weight: bold;
+}
+
+.phone_number{
+color: #1a305f;
+position: absolute;
+padding-right: 50%;
+font-weight: bold;
+
+}
+.phone_img{
+    position: absolute;
+}
+.searchbar-ios-cancel {
+    .button-inner{
+        display: none;
+    }
+    
+}
+
+}

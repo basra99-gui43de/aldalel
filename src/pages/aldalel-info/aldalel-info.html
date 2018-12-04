@@ -1,0 +1,52 @@
+<ion-header >
+
+  <ion-navbar color="dark_blue">
+    <ion-title>التفاصيل</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+  <div *ngFor=" let item of myDetails">
+  <div *ngIf="item.id === company_id">
+  <img class="logo_img" src="./assets/imgs/marketing/1.png">
+<div class="cont">
+  <ion-icon class="my_icon" name="home"></ion-icon>
+  <div class="my_card">
+    <p>{{company_name}}</p>
+  </div>
+</div>
+<div class="cont">
+  <ion-icon class="my_icon" name="mail"></ion-icon>
+  <div class="my_card">
+    <p>{{item.email}}</p>
+  </div>
+</div>
+<div class="cont">
+  <ion-icon class="my_icon" name="call"></ion-icon>
+  <div class="my_card">
+    <p>{{item.phone_number}}</p>
+  </div>
+</div>
+<div class="cont">
+  <ion-icon class="my_icon" name="navigate"></ion-icon>
+  <div class="my_card">
+    <p>{{item.location}}</p>
+  </div>
+</div>
+<div class="cont">
+    <ion-icon class="my_icon" name="information-circle"></ion-icon>
+    <div class="my_card">
+      <p>{{item.website}}</p>
+    </div>
+  </div>
+<div class="cont">
+  <div class="my_card2">
+    <p>{{item.map}}</p>
+  </div>
+</div>
+
+</div>
+</div>
+</ion-content>

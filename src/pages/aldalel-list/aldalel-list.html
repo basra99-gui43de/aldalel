@@ -1,0 +1,79 @@
+<!--
+  Generated template for the AldalelListPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header >
+
+  <!-- <ion-navbar color="dark_blue">
+    <ion-title>الدليل</ion-title>
+  </ion-navbar> -->
+
+
+  <ion-toolbar color="dark_blue">
+      <ion-title *ngIf="!sr ">
+          البحث عن مطعم
+        </ion-title>
+      <ion-searchbar [(ngModel)]="term" showCancelButton="true" *ngIf="sr ">
+      </ion-searchbar>
+
+      <ion-buttons star>
+          <button *ngIf="!sr " ion-button icon-only (click)="back()"> 
+              <ion-icon name="arrow-back"></ion-icon>
+            رجوع
+           
+          </button>
+        </ion-buttons>
+
+  <ion-buttons end>
+    <button *ngIf="sr " ion-button icon-only (click)="ser_Input()">
+      <ion-icon name="close"></ion-icon>
+    </button>
+  </ion-buttons>
+  <ion-buttons end>
+    <button *ngIf="!sr " ion-button icon-only (click)="ser_Input()">
+      <ion-icon name="search"></ion-icon>
+    </button>
+  </ion-buttons>
+</ion-toolbar>
+
+</ion-header>
+
+
+<ion-content class="bg_img" padding>
+
+
+    <!-- <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content
+        pullingIcon="arrow-dropdown"
+        pullingText="Pull to refresh"
+        refreshingSpinner="circles"
+        refreshingText="Refreshing...">
+      </ion-refresher-content>
+      </ion-refresher> -->
+
+
+
+
+  <ion-grid *ngFor=" let item of myCompany |filter:term" (click)="info(item.companydetails_id, item.company_name)" >
+    <div *ngIf="item.id === category_id">
+    <ion-row>
+      <ion-col>
+         <img class="fram"  src="./assets/imgs/dalel/1.png">
+         <h3 class="tit1">{{item.company_name}}</h3>
+         <p class="tit2"> {{item.subject}} </p>
+      </ion-col>
+    </ion-row>
+  </div>
+  </ion-grid>
+
+
+  <!-- <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+      <ion-infinite-scroll-content
+        loadingSpinner="bubbles"
+        loadingText="Loading more data...">
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll> -->
+    
+</ion-content>
