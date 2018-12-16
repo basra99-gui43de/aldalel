@@ -10,7 +10,10 @@
 <ion-content >
   <div *ngFor=" let item of myDetails |filter:term; let i = index ">
   <div >
-  <img class="logo_img" src="./assets/imgs/marketing/1.png">
+      <div style="height:250px;  margin-bottom: 40px;">
+        <img class="logo_img" src="https://www.pixeltech-iq.com/{{item.image}}">
+    </div>
+
 <div class="cont">
   <ion-icon class="my_icon" name="home"></ion-icon>
   <div class="my_card">
