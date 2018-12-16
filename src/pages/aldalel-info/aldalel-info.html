@@ -8,8 +8,8 @@
 
 
 <ion-content >
-  <div *ngFor=" let item of myDetails">
-  <div *ngIf="item.id === company_id">
+  <div *ngFor=" let item of myDetails |filter:term; let i = index ">
+  <div >
   <img class="logo_img" src="./assets/imgs/marketing/1.png">
 <div class="cont">
   <ion-icon class="my_icon" name="home"></ion-icon>
@@ -43,7 +43,8 @@
   </div>
 <div class="cont">
   <div class="my_card2">
-    <p>{{item.map}}</p>
+    
+    <p>الموقع على الخريطة</p>
   </div>
 </div>
 

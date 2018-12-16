@@ -15,9 +15,10 @@ import { CrudProvider } from '../../providers/crud/crud';
   templateUrl: 'aldalel-info.html',
 })
 export class AldalelInfoPage {
-myDetails:any;
+myDetails=[];
 company_id:any;
 company_name:any;
+ietmss:any
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
     public crudProvider:CrudProvider) {
@@ -26,9 +27,10 @@ company_name:any;
  }
 
   ionViewDidLoad() {
-    this.crudProvider.getCompanyDetails().then((data) => {
+    this.crudProvider.getCompanyDetails(this.company_id).then((data) => {
    
-      this.myDetails = data["data"];
+      this.ietmss = data["data"];
+      this.myDetails.push(this.ietmss) ;
       console.log( this.myDetails);
     });
   }

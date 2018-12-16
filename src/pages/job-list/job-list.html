@@ -30,27 +30,43 @@
   
   </ion-header>
   
-  
-  <ion-content class="bg_img" padding>
-   
-  <!-- <div class="cont" (click)="info()">
-         <div class="parallelogram1"></div>
-        <div class="circle"><h1>03</h1></div>
-        <div class="parallelogram2">
-         <h2>مكتب الكوثر</h2>
-        </div>
-  </div> -->
+  <ion-content class="bg_img" >
+      <img class="logo_img" src="./assets/imgs/carear/33.png">
 
-  <ion-card *ngFor=" let item of myJobs |filter:term">
-      <ion-card-header>
-          {{item.title}}
-      </ion-card-header>
-      <ion-card-content>
-       {{item.gender_age}}
-       <br>
-       {{item.experiences}}
-      </ion-card-content>
-    </ion-card>
+ 
+    <div class="cont_div"    *ngFor=" let item of myJobs |filter:term" >
+   
+        <div>
+            <p class="c_name">شركة الاطار</p>
+            <p class="c_tit" >{{item.title}}</p>
+             <img class="logo_img" src="./assets/imgs/carear/1.png">
+          </div>
+   
+           <div>
+               <p class="age_tit" >العمر والجنس</p>
+               <p class="age" *ngIf="item.gender == 1 ">{{item.age}} - ذكر  </p>
+               <p class="age" *ngIf="item.gender == 2 ">{{item.age}} - انثى  </p>
+             <img class="logo_img" src="./assets/imgs/carear/2.png">
+           </div>
+   
+           <div>
+               <p class="stu_tit" >التخصص</p>
+               <p class="stu" >{{item.specialization}}</p>
+             <img class="logo_img" src="./assets/imgs/carear/2.png">
+           </div>
+           <div>
+               <p class="stu_tit" >الخبرة</p>
+               <p class="stu" >{{item.experiences}}</p>
+             <img class="logo_img" src="./assets/imgs/carear/2.png">
+           </div>
+   
+           <div>
+               <p class="contact_tit" >للتواصل معنا</p>
+               <p class="contact" >البصرة شارع الجزائر - 07704222121</p>
+             <img class="logo_img" src="./assets/imgs/carear/2.png">
+           </div>
+    </div>
+
   
   </ion-content>
   

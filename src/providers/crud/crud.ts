@@ -181,14 +181,32 @@ getCompanies(){
 }
 
 
-getCompanyDetails(){
+getCompanyDetails(id){
   return new Promise((resolve, reject) => {
   
 
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
 
-    this.http.get(apiKey+'api/companydetails', {headers: headers})
+    this.http.get(apiKey+'api/companydetails/'+id, {headers: headers})
+      .map(res => res.json())
+      .subscribe(data => {
+        resolve(data);
+      }, (err) => {
+        reject(err);
+      }); 
+
+});
+
+}
+getCompanyByType(id){
+  return new Promise((resolve, reject) => {
+  
+
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+
+    this.http.get(apiKey+'api/companiesByType/'+id, {headers: headers})
       .map(res => res.json())
       .subscribe(data => {
         resolve(data);

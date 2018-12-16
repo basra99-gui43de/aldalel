@@ -1,1 +1,1 @@
-export const apiKey = 'https://daleel-albasra-api.herokuapp.com/'
+export const apiKey = 'http://dalel.pixeltech-iq.com/'

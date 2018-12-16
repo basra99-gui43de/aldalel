@@ -13,7 +13,7 @@
 
   <ion-toolbar color="dark_blue">
       <ion-title *ngIf="!sr ">
-          البحث عن مطعم
+          الدليل
         </ion-title>
       <ion-searchbar [(ngModel)]="term" showCancelButton="true" *ngIf="sr ">
       </ion-searchbar>
@@ -43,24 +43,12 @@
 
 <ion-content class="bg_img" padding>
 
-
-    <!-- <ion-refresher (ionRefresh)="doRefresh($event)">
-        <ion-refresher-content
-        pullingIcon="arrow-dropdown"
-        pullingText="Pull to refresh"
-        refreshingSpinner="circles"
-        refreshingText="Refreshing...">
-      </ion-refresher-content>
-      </ion-refresher> -->
-
-
-
-
-  <ion-grid *ngFor=" let item of myCompany |filter:term" (click)="info(item.companydetails_id, item.company_name)" >
-    <div *ngIf="item.id === category_id">
+  <ion-grid *ngFor=" let item of myCompany |filter:term" (click)="info(item.company_details_id, item.company_name)" >
+    <div >
     <ion-row>
       <ion-col>
          <img class="fram"  src="./assets/imgs/dalel/1.png">
+         <img class="logo"  src="https://www.pixeltech-iq.com/{{item.company_logo}}">
          <h3 class="tit1">{{item.company_name}}</h3>
          <p class="tit2"> {{item.subject}} </p>
       </ion-col>
@@ -69,11 +57,5 @@
   </ion-grid>
 
 
-  <!-- <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
-      <ion-infinite-scroll-content
-        loadingSpinner="bubbles"
-        loadingText="Loading more data...">
-      </ion-infinite-scroll-content>
-    </ion-infinite-scroll> -->
     
 </ion-content>

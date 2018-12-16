@@ -18,7 +18,7 @@ import { Observable } from 'rxjs/Observable';
 })
 export class AldalelListPage {
 myCompany:any;
-category_id:any
+type:any
 // data:Observable<any[]>;
 sr=false;
   constructor(
@@ -26,11 +26,11 @@ sr=false;
     public navCtrl: NavController,
     public navParams: NavParams,
     public crudProvider:CrudProvider) {
-      this.category_id = this.navParams.get('id');
+      this.type = this.navParams.get('id');
  }
 
  ionViewDidLoad() {
-  this.crudProvider.getCompanies().then((data) => {
+  this.crudProvider.getCompanyByType(this.type).then((data) => {
    
     this.myCompany = data["data"];
     console.log( this.myCompany);
