@@ -29,6 +29,8 @@ export class CrudProvider {
       
 
         let headers = new Headers();
+        headers.append('Access-Control-Allow-Origin' , '*');
+        headers.append('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, PUT');
         headers.append('Content-Type', 'application/json');
     
         this.http.get(apiKey+'api/importantphones', {headers: headers})
@@ -49,6 +51,8 @@ export class CrudProvider {
     
 
       let headers = new Headers();
+      headers.append('Access-Control-Allow-Origin' , '*');
+      headers.append('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, PUT');
       headers.append('Content-Type', 'application/json');
   
       this.http.get(apiKey+'api/markating', {headers: headers})
@@ -68,6 +72,8 @@ getCarrer(){
   
 
     let headers = new Headers();
+    headers.append('Access-Control-Allow-Origin' , '*');
+    headers.append('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, PUT');
     headers.append('Content-Type', 'application/json');
 
     this.http.get(apiKey+'api/careers', {headers: headers})
@@ -87,6 +93,8 @@ getCarrerInfo(){
   
 
     let headers = new Headers();
+    headers.append('Access-Control-Allow-Origin' , '*');
+    headers.append('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, PUT');
     headers.append('Content-Type', 'application/json');
 
     this.http.get(apiKey+'api/careerdetails', {headers: headers})
@@ -107,6 +115,8 @@ getJobs(){
   
 
     let headers = new Headers();
+    headers.append('Access-Control-Allow-Origin' , '*');
+    headers.append('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, PUT');
     headers.append('Content-Type', 'application/json');
 
     this.http.get(apiKey+'api/jobs', {headers: headers})
@@ -127,6 +137,8 @@ getEmployees(){
   
 
     let headers = new Headers();
+    headers.append('Access-Control-Allow-Origin' , '*');
+    headers.append('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, PUT');
     headers.append('Content-Type', 'application/json');
 
     this.http.get(apiKey+'api/employees', {headers: headers})
@@ -147,6 +159,8 @@ getCategoires(){
   
 
     let headers = new Headers();
+    headers.append('Access-Control-Allow-Origin' , '*');
+    headers.append('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, PUT');
     headers.append('Content-Type', 'application/json');
 
     this.http.get(apiKey+'api/categorynames', {headers: headers})
@@ -166,6 +180,8 @@ getCompanies(){
   
 
     let headers = new Headers();
+    headers.append('Access-Control-Allow-Origin' , '*');
+    headers.append('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, PUT');
     headers.append('Content-Type', 'application/json');
 
     this.http.get(apiKey+'api/companies', {headers: headers})
@@ -186,6 +202,8 @@ getCompanyDetails(id){
   
 
     let headers = new Headers();
+    headers.append('Access-Control-Allow-Origin' , '*');
+    headers.append('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, PUT');
     headers.append('Content-Type', 'application/json');
 
     this.http.get(apiKey+'api/companydetails/'+id, {headers: headers})
@@ -204,6 +222,8 @@ getCompanyByType(id){
   
 
     let headers = new Headers();
+    headers.append('Access-Control-Allow-Origin' , '*');
+    headers.append('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, PUT');
     headers.append('Content-Type', 'application/json');
 
     this.http.get(apiKey+'api/companiesByType/'+id, {headers: headers})
