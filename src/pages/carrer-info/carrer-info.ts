@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController,AlertController } from 'ionic-angular';
 import { CrudProvider } from '../../providers/crud/crud';
 
 /**
@@ -17,17 +17,44 @@ import { CrudProvider } from '../../providers/crud/crud';
 export class CarrerInfoPage {
   myCarrerInfo:any;
   id:any;
+  internet=false;
   constructor(public navCtrl: NavController,
-    public navParams: NavParams,
+     public navParams: NavParams,
+     public alertCtrl: AlertController,
+     public loadingCtrl: LoadingController,
     public crudProvider:CrudProvider) {
       this.id = this.navParams.get('id');
       console.log('recieving id .....:', this.id);
       
  }
 
-  ionViewDidLoad() {
+ noInternet() {
+    
+  const alert = this.alertCtrl.create({
+    title: 'لا يوجد اتصال',
+    subTitle: "تأكد من اتصالك بالانترنيت",
+    buttons: ['حسناً']
+  });
+  alert.present();
+}
+
+ionViewDidLoad() {
+  const loader = this.loadingCtrl.create({
+    content: "يرجى الانتضار ... يعمد على سرعة الانترنيت لديك",});
+  loader.present();
+  
+    setTimeout(() => {
+      if (this.internet == false) {
+         loader.dismiss();
+       this.noInternet();
+        }
+      }, 10000);
+
     this.crudProvider.getCarrerInfo().then((data) => {
-     
+      if (data) {
+        loader.dismiss();
+        this.internet=true
+      }
       this.myCarrerInfo = data["data"];
       console.log( this.myCarrerInfo);
     });

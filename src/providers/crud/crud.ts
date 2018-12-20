@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import {apiKey} from "../../app/apiurls/serverurls.js";
 import { Http , Headers } from '@angular/http';
@@ -32,7 +31,7 @@ export class CrudProvider {
         headers.append('Access-Control-Allow-Origin' , '*');
         headers.append('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, PUT');
         headers.append('Content-Type', 'application/json');
-    
+        headers.append('Accept','application/json');
         this.http.get(apiKey+'api/importantphones', {headers: headers})
           .map(res => res.json())
           .subscribe(data => {
