@@ -25,11 +25,7 @@ constructor(public navCtrl: NavController,
 }
 
   ionViewDidLoad() {
-    this.crudProvider.getCategoires().then((data) => {
-     
-      this.myCategories = data["data"];
-      console.log( this.myCategories);
-    });
+
   }
   list(id){
     this.navCtrl.push(AldalelListPage,{

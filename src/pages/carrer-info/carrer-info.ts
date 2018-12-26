@@ -40,7 +40,7 @@ export class CarrerInfoPage {
 
 ionViewDidLoad() {
   const loader = this.loadingCtrl.create({
-    content: "يرجى الانتضار ... يعمد على سرعة الانترنيت لديك",});
+    content: "يرجى الانتضار ... يعتمد على سرعة الانترنيت لديك",});
   loader.present();
   
     setTimeout(() => {

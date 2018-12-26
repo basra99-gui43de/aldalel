@@ -40,7 +40,7 @@ constructor(public navCtrl: NavController,
 
 ionViewDidLoad() {
   const loader = this.loadingCtrl.create({
-    content: "يرجى الانتضار ... يعمد على سرعة الانترنيت لديك",});
+    content: "يرجى الانتضار ... يعتمد على سرعة الانترنيت لديك",});
   loader.present();
   
     setTimeout(() => {
@@ -57,7 +57,7 @@ ionViewDidLoad() {
       }
       this.ietmss = data["data"];
       this.myDetails.push(this.ietmss) ;
-      console.log( this.myDetails);
+      console.log( this.ietmss);
     });
   }
 
