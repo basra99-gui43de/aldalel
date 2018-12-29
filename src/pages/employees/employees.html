@@ -41,44 +41,48 @@
    <div class="cont_div" *ngFor=" let item of myEmployees |filter:term">
     <ion-grid>
       <ion-row>
+        <ion-col col-6 style="margin-top: 20%;text-align: center;">
+          <a href="https://www.pixeltech-iq.com/{{item.cv}}"><img class="logo_img" src="./assets/imgs/carear2/6.png"></a>
+        </ion-col>
+        <ion-col col-6>
+          <img class="logo_img" src="https://www.pixeltech-iq.com/{{item.profilel_image}}">
+        </ion-col>
+      </ion-row>
+      <ion-row>
           
-        <ion-col col-8>
+        <ion-col col-12>
             <div>
                 <p class="c_name">الاسم</p>
                 <p class="c_tit" >{{item.name}}</p>
-                <img class="logo_img" src="./assets/imgs/carear2/2.png">
+                <img class="logo_img" src="./assets/imgs/carear/1.png">
               </div>
 
               <div>
                   <p class="age_tit" >العمر والجنس</p>
                   <p class="age" *ngIf="item.gender == 1 ">{{item.age}} - ذكر  </p>
                   <p class="age" *ngIf="item.gender == 2 ">{{item.age}} - انثى  </p>
-                <img class="logo_img" src="./assets/imgs/carear2/5.png">
+                <img class="logo_img" src="./assets/imgs/carear/2.png">
               </div>
 
               <div>
                   <p class="stu_tit" >الاختصاص</p>
                   <p class="stu" >{{item.specialization}}</p>
-                <img class="logo_img" src="./assets/imgs/carear2/5.png">
+                <img class="logo_img" src="./assets/imgs/carear/2.png">
               </div>
 
               <div>
                   <p class="stu_tit" >التحصيل الدراسي</p>
                   <p class="stu" >{{item.academic_achievement}}</p>
-                <img class="logo_img" src="./assets/imgs/carear2/5.png">
+                <img class="logo_img" src="./assets/imgs/carear/2.png">
               </div>
 
               <div>
                   <p class="contact_tit" >رقم الهاتف</p>
                   <p class="contact" >{{item.phone_number}}</p>
-                <img class="logo_img" src="./assets/imgs/carear2/5.png">
+                <img class="logo_img" src="./assets/imgs/carear/2.png">
               </div>
         </ion-col>
-        <ion-col col-4>
-           <img class="logo_img" src="https://www.pixeltech-iq.com/{{item.profilel_image}}">
-           <a href="https://www.pixeltech-iq.com/{{item.cv}}"><img class="logo_img" src="./assets/imgs/carear2/6.png"></a>
-           
-        </ion-col>
+
       </ion-row>
     </ion-grid>
    </div>

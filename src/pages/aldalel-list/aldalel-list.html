@@ -1,44 +1,29 @@
-<!--
-  Generated template for the AldalelListPage page.
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header >
-
-  <!-- <ion-navbar color="dark_blue">
-    <ion-title>الدليل</ion-title>
-  </ion-navbar> -->
-
-
-  <ion-toolbar color="dark_blue">
-      <ion-title *ngIf="!sr ">
-          الدليل
-        </ion-title>
-      <ion-searchbar [(ngModel)]="term" showCancelButton="true" *ngIf="sr ">
-      </ion-searchbar>
-
+    <ion-toolbar color="dark_blue">
       <ion-buttons star>
           <button *ngIf="!sr " ion-button icon-only (click)="back()"> 
-              <ion-icon name="arrow-back"></ion-icon>
-            رجوع
-           
+          <ion-icon name="arrow-back"></ion-icon>
+          رجوع
           </button>
-        </ion-buttons>
-
-  <ion-buttons end>
-    <button *ngIf="sr " ion-button icon-only (click)="ser_Input()">
-      <ion-icon name="close"></ion-icon>
-    </button>
-  </ion-buttons>
-  <ion-buttons end>
-    <button *ngIf="!sr " ion-button icon-only (click)="ser_Input()">
-      <ion-icon name="search"></ion-icon>
-    </button>
-  </ion-buttons>
-</ion-toolbar>
-
+      </ion-buttons>
+      <ion-title *ngIf="!sr ">
+        {{typeName[type]}}
+      </ion-title>
+      <ion-searchbar [(ngModel)]="term" showCancelButton="true" *ngIf="sr "></ion-searchbar>
+      <ion-buttons end>
+          <button *ngIf="sr " ion-button icon-only (click)="ser_Input()">
+          <ion-icon name="close"></ion-icon>
+          </button>
+      </ion-buttons>
+      <ion-buttons end>
+          <button *ngIf="!sr " ion-button icon-only (click)="ser_Input()">
+          <ion-icon name="search"></ion-icon>
+          </button>
+      </ion-buttons>
+    </ion-toolbar>
 </ion-header>
+
 
 
 <ion-content class="bg_img" padding>
