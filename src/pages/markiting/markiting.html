@@ -36,11 +36,11 @@
 
 
  
-<div class="cont"  *ngFor=" let item of myMarkating |filter:term; let i = index ">
+<div class="cont"  *ngFor=" let item of myMarkating ; let i = index ">
        <div class="parallelogram1"></div>
       <div class="circle"><h1>{{i +1}}</h1></div>
       <div class="parallelogram2">
-        <h2 style="margin-bottom: 0;">{{item.title}}</h2>
+        <h3 style="margin-bottom: 0; margin-top: -11%;">{{item.title}}</h3>
         <p style="margin-top: 0;">{{item.description}}</p>
       </div>
 </div>

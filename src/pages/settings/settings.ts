@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController,AlertController } from 'ionic-angular';
+import { CrudProvider } from '../../providers/crud/crud';
+import {apiKey} from "../../app/apiurls/serverurls.js";
 
 /**
  * Generated class for the SettingsPage page.
@@ -14,12 +16,50 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'settings.html',
 })
 export class SettingsPage {
+  sponsores:any;
+  sr=false;
+  internet=false;
+  constructor(public navCtrl: NavController,
+     public navParams: NavParams,
+     public alertCtrl: AlertController,
+     public loadingCtrl: LoadingController,
+      public crudProvider:CrudProvider) {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+   }
+
+
+   noInternet() {
+    
+    const alert = this.alertCtrl.create({
+      title: 'لا يوجد اتصال',
+      subTitle: "تأكد من اتصالك بالانترنيت",
+      buttons: ['حسناً']
+    });
+    alert.present();
   }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad SettingsPage');
+  
+  ionViewDidEnter() {
+    const loader = this.loadingCtrl.create({
+      content: "يرجى الانتضار ... يعتمد على سرعة الانترنيت لديك",});
+    loader.present();
+    
+      setTimeout(() => {
+        if (this.internet == false) {
+           loader.dismiss();
+         this.noInternet();
+          }
+        }, 10000);
+  
+    this.crudProvider.getSponsores().then((data) => {
+      if (data) {
+        loader.dismiss();
+        this.internet=true
+      }
+      this.sponsores = data["data"];
+      console.log( this.sponsores);
+    });
   }
-
+  ser_Input(){
+    this.sr=!this.sr;
+    }
 }

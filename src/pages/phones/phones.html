@@ -31,7 +31,7 @@
   
   <ion-content class="bg_img" padding>
     
-<div class="phone_content"  *ngFor=" let item of myphone  |filter:term">
+<div class="phone_content"  *ngFor=" let item of myphone  ">
  <img class="phone_img" (click)="list()" src="./assets/imgs/phones/1.png">
   <div class="phone_name"><p>{{item.company_name}}</p></div>
   <div class="phone_number"><p>{{item.phone_number}}</p></div>

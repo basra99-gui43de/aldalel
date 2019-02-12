@@ -173,7 +173,26 @@ getCategoires(){
 });
 
 }
+getSponsores(){
+  return new Promise((resolve, reject) => {
+  
 
+    let headers = new Headers();
+    headers.append('Access-Control-Allow-Origin' , '*');
+    headers.append('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, PUT');
+    headers.append('Content-Type', 'application/json');
+
+    this.http.get(apiKey+'api/sponsores', {headers: headers})
+      .map(res => res.json())
+      .subscribe(data => {
+        resolve(data);
+      }, (err) => {
+        reject(err);
+      }); 
+
+});
+
+}
 getCompanies(){
   return new Promise((resolve, reject) => {
   
@@ -184,6 +203,28 @@ getCompanies(){
     headers.append('Content-Type', 'application/json');
 
     this.http.get(apiKey+'api/companies', {headers: headers})
+      .map(res => res.json())
+      .subscribe(data => {
+        resolve(data);
+      }, (err) => {
+        reject(err);
+      }); 
+
+});
+
+}
+
+
+getCompaniesWithDetails(){
+  return new Promise((resolve, reject) => {
+  
+
+    let headers = new Headers();
+    headers.append('Access-Control-Allow-Origin' , '*');
+    headers.append('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, PUT');
+    headers.append('Content-Type', 'application/json');
+
+    this.http.get(apiKey+'api/companylogo', {headers: headers})
       .map(res => res.json())
       .subscribe(data => {
         resolve(data);

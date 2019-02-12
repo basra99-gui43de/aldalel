@@ -2,7 +2,7 @@
 <ion-header >
 
   <ion-navbar color="dark_blue">
-    <ion-title>الاعدادات</ion-title>
+    <ion-title>المسوقين</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -10,7 +10,14 @@
 
 <ion-content class="bg_img" padding>
 
-
+  <ion-list>
+    <ion-item *ngFor=" let item of sponsores ">
+      <ion-avatar item-start>
+        <img src="https://admin.daleel-albasra.com/{{item.image}}">
+      </ion-avatar>
+      <h2>{{item.name}}</h2>
+    </ion-item>
+  </ion-list>
  
 
 </ion-content>

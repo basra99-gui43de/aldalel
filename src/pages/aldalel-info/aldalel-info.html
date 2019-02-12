@@ -8,22 +8,22 @@
 
 
 <ion-content >
-  <div *ngFor=" let item of ietmss |filter:term; let i = index ">
+  <div *ngFor=" let item of ietmss  let i = index ">
   <div >
 
     <div style="height:250px; padding: 0px; margin-bottom: 40px;">
       <ion-slides  autoplay="3000" loop="true" speed="2000">
           <ion-slide>
-              <img  class="slide-img "  src="https://www.pixeltech-iq.com/{{item.image1}}"  />
+              <img  class="slide-img "  src="https://admin.daleel-albasra.com/{{item.image1}}" imageViewer />
           </ion-slide>
           <ion-slide>
-              <img  class="slide-img" src="https://www.pixeltech-iq.com/{{item.image2}}"  />
+              <img  class="slide-img" src="https://admin.daleel-albasra.com/{{item.image2}}" imageViewer />
           </ion-slide>
           <ion-slide>
-              <img class="slide-img" src="https://www.pixeltech-iq.com/{{item.image3}}"  />
+              <img class="slide-img" src="https://admin.daleel-albasra.com/{{item.image3}}" imageViewer />
           </ion-slide>
           <ion-slide>
-              <img class="slide-img" src="https://www.pixeltech-iq.com/{{item.image4}}"  />
+              <img class="slide-img" src="https://admin.daleel-albasra.com/{{item.image4}}" imageViewer />
           </ion-slide>
         </ion-slides>
   </div>
@@ -40,12 +40,18 @@
     <p>{{item.email}}</p>
   </div>
 </div>
+
+
+
 <div class="cont">
   <ion-icon class="my_icon" name="call"></ion-icon>
   <div class="my_card">
-    <p>{{item.phone_number}}</p>
+    <p (click)="callNow()">{{item.phone_number}}</p>
   </div>
 </div>
+
+
+
 <div class="cont">
   <ion-icon class="my_icon" name="navigate"></ion-icon>
   <div class="my_card">
@@ -53,15 +59,26 @@
   </div>
 </div>
 <div class="cont">
-    <ion-icon class="my_icon" name="information-circle"></ion-icon>
+    <ion-icon class="my_icon" name="globe"></ion-icon>
     <div class="my_card">
       <p>{{item.website}}</p>
     </div>
   </div>
+
+
+  <div class="cont">
+   
+    <div class="subjectCard">
+      <p style='font-family: Times New Roman '>{{subject}}</p>
+    </div>
+  </div>
+
+
 <div class="cont">
   <div class="my_card2">
-    
-    <p>الموقع على الخريطة</p>
+      <a style="color: #ffed00" href="{{item.map}}" target="_blank" >
+    <p style="display: inline-block;">الموقع على الخارطة</p>
+  </a>
   </div>
 </div>
 

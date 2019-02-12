@@ -36,7 +36,7 @@
 
 
  
-<div class="cont" (click)="info(item.careerdetails_id)" *ngFor=" let item of myCarrer |filter:term; let i = index">
+<div class="cont" (click)="info(item.careerdetails_id)" *ngFor=" let item of myCarrer ; let i = index">
        <div class="parallelogram1"></div>
       <div class="circle"><h1>{{i+1}}</h1></div>
       <div class="parallelogram2">

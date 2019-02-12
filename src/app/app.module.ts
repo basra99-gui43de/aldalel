@@ -1,3 +1,5 @@
+import { SettingsPageModule } from './../pages/settings/settings.module';
+import { AldalelPageModule } from './../pages/aldalel/aldalel.module';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
@@ -29,25 +31,36 @@ import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http'; 
 
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
-
+import { AldalelListPageModule } from '../pages/aldalel-list/aldalel-list.module';
+import { AldalelInfoPageModule } from '../pages/aldalel-info/aldalel-info.module';
+import { MarkitingPageModule } from '../pages/markiting/markiting.module';
+import { PhonesPageModule } from '../pages/phones/phones.module';
+import { JobListPageModule } from '../pages/job-list/job-list.module';
+import { CarrerInfoPageModule } from '../pages/carrer-info/carrer-info.module';
+import { CarrerPageModule } from '../pages/carrer/carrer.module';
+import { JobsPageModule } from '../pages/jobs/jobs.module';
+import { EmployeesPageModule } from '../pages/employees/employees.module';
+import { CallNumber } from '@ionic-native/call-number';
+import { IonicImageViewerModule } from 'ionic-img-viewer';
 @NgModule({
   declarations: [
     MyApp,
     AboutPage,
     ContactPage,
     HomePage,
-    SettingsPage,
-    AldalelPage,
-    AldalelListPage,
-    AldalelInfoPage,
-    MarkitingPage,
-    PhonesPage,
-    JobListPage,
+
     TabsPage,
-    CarrerPage,
-    CarrerInfoPage,
-    JobsPage,
-    EmployeesPage,
+   // SettingsPage,
+    // AldalelPage,
+    // AldalelListPage,
+    // AldalelInfoPage,
+    // MarkitingPage,
+    // PhonesPage,
+    // JobListPage,
+    // CarrerPage,
+    // CarrerInfoPage,
+    // JobsPage,
+    // EmployeesPage,
     
   ],
   imports: [
@@ -55,8 +68,20 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     IonicModule.forRoot(MyApp),
     IonicStorageModule.forRoot(),
     HttpModule,
+    AldalelPageModule,
+    AldalelListPageModule,
+    AldalelInfoPageModule,
+    MarkitingPageModule,
+    PhonesPageModule,
+    JobListPageModule,
+    CarrerPageModule,
+    CarrerInfoPageModule,
+    JobsPageModule,
+    EmployeesPageModule,
+    SettingsPageModule,
     Ng2SearchPipeModule,
-    HttpClientModule
+    HttpClientModule,
+    IonicImageViewerModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -80,6 +105,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
   providers: [
     StatusBar,
     SplashScreen,
+    CallNumber,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     CrudProvider
   ]

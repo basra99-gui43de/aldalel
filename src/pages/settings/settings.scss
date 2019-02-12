@@ -1,3 +1,14 @@
 page-settings {
+    ion-item{
+    margin-top: 25px !important;
+    color: #192f60 !important;
+    background-color: #ffef00 !important;
+    border-radius: 50px !important;
+    border-top: 0.55px solid #ffed00  !important;
+    }
+    ion-item ion-avatar img {
 
+        width: 50px !important;
+        height: 50px !important;
+    }
 }

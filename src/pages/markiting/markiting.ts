@@ -37,8 +37,8 @@ internet=false;
 
   ionViewDidLoad() {
     const loader = this.loadingCtrl.create({
-      content: "يرجى الانتضار ... يعمد على سرعة الانترنيت لديك",});
-    loader.present();
+      content: "يرجى الانتضار ... يعتمد على سرعة الانترنيت لديك",});
+      loader.present();
     
       setTimeout(() => {
         if (this.internet == false) {

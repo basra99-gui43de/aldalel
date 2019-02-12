@@ -28,7 +28,7 @@
 
 <ion-content class="bg_img" padding>
 
-  <ion-grid *ngFor=" let item of myCompany |filter:term" (click)="info(item.company_details_id, item.company_name)" >
+  <ion-grid *ngFor=" let item of myCompany " (click)="info(item.company_details_id, item.company_name)" >
     <div >
     <ion-row>
       <ion-col>

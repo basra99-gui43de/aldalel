@@ -1,1 +1,1 @@
-export const apiKey = 'http://dalel.pixeltech-iq.com/'
+export const apiKey = 'https://mobile.daleel-albasra.com/'

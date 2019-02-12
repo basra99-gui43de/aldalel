@@ -5,6 +5,7 @@ import { MarkitingPage } from '../markiting/markiting';
 import { PhonesPage } from '../phones/phones';
 import { JobsPage } from '../jobs/jobs';
 import { CarrerPage } from '../carrer/carrer';
+import { ContactPage } from '../contact/contact';
 
 @Component({
   selector: 'page-home',
@@ -30,5 +31,7 @@ export class HomePage {
 career(){
   this.navCtrl.push(CarrerPage);
 }
-
+contact(){
+  this.navCtrl.push(ContactPage);
+}
 }
