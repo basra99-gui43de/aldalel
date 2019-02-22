@@ -41,7 +41,7 @@ import { CarrerPageModule } from '../pages/carrer/carrer.module';
 import { JobsPageModule } from '../pages/jobs/jobs.module';
 import { EmployeesPageModule } from '../pages/employees/employees.module';
 import { CallNumber } from '@ionic-native/call-number';
-import { IonicImageViewerModule } from 'ionic-img-viewer';
+import { PhotoViewer} from '@ionic-native/photo-viewer';
 @NgModule({
   declarations: [
     MyApp,
@@ -64,6 +64,7 @@ import { IonicImageViewerModule } from 'ionic-img-viewer';
     
   ],
   imports: [
+
     BrowserModule,
     IonicModule.forRoot(MyApp),
     IonicStorageModule.forRoot(),
@@ -81,7 +82,6 @@ import { IonicImageViewerModule } from 'ionic-img-viewer';
     SettingsPageModule,
     Ng2SearchPipeModule,
     HttpClientModule,
-    IonicImageViewerModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -107,7 +107,8 @@ import { IonicImageViewerModule } from 'ionic-img-viewer';
     SplashScreen,
     CallNumber,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    CrudProvider
+    CrudProvider,
+    PhotoViewer
   ]
 })
 export class AppModule {}

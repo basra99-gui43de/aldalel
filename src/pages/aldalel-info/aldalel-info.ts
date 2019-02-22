@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController,AlertController } from 'ionic-angular';
 import { CrudProvider } from '../../providers/crud/crud';
 import { CallNumber } from '@ionic-native/call-number';
+import { PhotoViewer } from '@ionic-native/photo-viewer';
 
 /**
  * Generated class for the AldalelInfoPage page.
@@ -28,6 +29,7 @@ phoneNumber:any;
 constructor(public navCtrl: NavController,
    public navParams: NavParams,
    public alertCtrl: AlertController,
+   private photoViewer: PhotoViewer,
    public loadingCtrl: LoadingController,
     public crudProvider:CrudProvider
     ,private callNumber: CallNumber) {
@@ -78,6 +80,10 @@ ionViewDidLoad() {
     this.callNumber.callNumber(this.phoneNumber, true)
       .then(res => console.log('Launched dialer!', res))
       .catch(err => console.log('Error launching dialer', err));
+  }
+
+  zoom(url){
+    this.photoViewer.show("https://admin.daleel-albasra.com/"+url);
   }
 
 }

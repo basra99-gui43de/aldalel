@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController,AlertController } from 'ionic-angular';
 import { CrudProvider } from '../../providers/crud/crud';
-import {apiKey} from "../../app/apiurls/serverurls.js";
 
 /**
  * Generated class for the SettingsPage page.

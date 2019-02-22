@@ -14,16 +14,16 @@
     <div style="height:250px; padding: 0px; margin-bottom: 40px;">
       <ion-slides  autoplay="3000" loop="true" speed="2000">
           <ion-slide>
-              <img  class="slide-img "  src="https://admin.daleel-albasra.com/{{item.image1}}" imageViewer />
+              <img  class="slide-img "  src="https://admin.daleel-albasra.com/{{item.image1}}"  (click)="zoom(item.image1)"/>
           </ion-slide>
           <ion-slide>
-              <img  class="slide-img" src="https://admin.daleel-albasra.com/{{item.image2}}" imageViewer />
+              <img  class="slide-img" src="https://admin.daleel-albasra.com/{{item.image2}}"  (click)="zoom(item.image2)"/>
           </ion-slide>
           <ion-slide>
-              <img class="slide-img" src="https://admin.daleel-albasra.com/{{item.image3}}" imageViewer />
+              <img class="slide-img" src="https://admin.daleel-albasra.com/{{item.image3}}"  (click)="zoom(item.image3)"/>
           </ion-slide>
           <ion-slide>
-              <img class="slide-img" src="https://admin.daleel-albasra.com/{{item.image4}}" imageViewer />
+              <img class="slide-img" src="https://admin.daleel-albasra.com/{{item.image4}}" (click)="zoom(item.image4)" />
           </ion-slide>
         </ion-slides>
   </div>
